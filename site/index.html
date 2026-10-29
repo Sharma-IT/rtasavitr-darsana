@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ṛtasavitṛ Darśana</title>
+<meta name="description" content="Ṛtasavitṛ Darśana: A Circular-Recursive Ontology of Experience and Its Terminus. Shubham Sharma, 2026.">
+<meta property="og:title" content="Ṛtasavitṛ Darśana">
+<meta property="og:description" content="A Circular-Recursive Ontology of Experience and Its Terminus. Shubham Sharma, 2026.">
+<meta property="og:type" content="book">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%23a5662b' stroke-width='2.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23a5662b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>
+  :root {
+    --paper: #f6f1e7;
+    --paper-edge: #ece4d3;
+    --ink: #1f1a14;
+    --ink-soft: #5d5346;
+    --rule: #cfc3ad;
+    --accent: #a5662b;
+    --accent-ink: #fbf7ef;
+    --halo: rgba(165, 102, 43, 0.10);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #14110d;
+      --paper-edge: #1d1914;
+      --ink: #ece4d6;
+      --ink-soft: #a89c8a;
+      --rule: #3a3329;
+      --accent: #d89a5c;
+      --accent-ink: #17120c;
+      --halo: rgba(216, 154, 92, 0.10);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #14110d;
+    --paper-edge: #1d1914;
+    --ink: #ece4d6;
+    --ink-soft: #a89c8a;
+    --rule: #3a3329;
+    --accent: #d89a5c;
+    --accent-ink: #17120c;
+    --halo: rgba(216, 154, 92, 0.10);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100vh;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background:
+      radial-gradient(ellipse 70% 55% at 50% 38%, var(--halo), transparent 70%),
+      linear-gradient(180deg, var(--paper), var(--paper-edge));
+    background-color: var(--paper);
+    color: var(--ink);
+    font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+    font-size: 19px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 72px 16px 48px;
+  }
+
+  .orbit {
+    width: 112px;
+    height: 112px;
+    margin-bottom: 40px;
+    color: var(--accent);
+  }
+  .orbit .spin { transform-origin: 60px 60px; animation: turn 48s linear infinite; }
+  .orbit .spin.rev { animation-direction: reverse; animation-duration: 72s; }
+  @keyframes turn { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) { .orbit .spin { animation: none; } }
+
+  .eyebrow {
+    font-variant: small-caps;
+    letter-spacing: 0.18em;
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    margin: 0 0 18px;
+  }
+
+  h1 {
+    font-weight: 500;
+    font-size: clamp(2.6rem, 9vw, 4.6rem);
+    line-height: 1.05;
+    letter-spacing: 0.005em;
+    margin: 0;
+  }
+
+  .subtitle {
+    font-style: italic;
+    font-size: clamp(1.15rem, 3.4vw, 1.5rem);
+    color: var(--ink-soft);
+    max-width: 30ch;
+    margin: 18px auto 0;
+    line-height: 1.35;
+  }
+
+  .rule {
+    width: 160px;
+    height: 1px;
+    border: 0;
+    margin: 40px auto;
+    background: linear-gradient(90deg, transparent, var(--rule), transparent);
+  }
+
+  .author {
+    font-size: 1.15rem;
+    margin: 0;
+    letter-spacing: 0.02em;
+  }
+  .author a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--rule); }
+  .author a:hover, .author a:focus-visible { border-bottom-color: var(--accent); }
+  .year { color: var(--ink-soft); margin: 4px 0 0; }
+
+  .download {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 48px;
+    padding: 15px 30px 15px 26px;
+    background: var(--accent);
+    color: var(--accent-ink);
+    text-decoration: none;
+    font-size: 1.08rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    border-radius: 999px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 10px 30px -12px var(--accent);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+  }
+  .download:hover { transform: translateY(-1px); box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 16px 34px -12px var(--accent); }
+  .download:focus-visible { outline: 2px solid var(--ink); outline-offset: 4px; }
+  .download svg { width: 18px; height: 18px; flex: none; }
+
+  .meta {
+    margin: 18px 0 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    font-variant-numeric: oldstyle-nums;
+    letter-spacing: 0.02em;
+  }
+  .meta span + span::before { content: "·"; margin: 0 0.6em; color: var(--rule); }
+
+  footer {
+    text-align: center;
+    padding: 24px 16px 32px;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+<main>
+  <svg class="orbit" viewBox="0 0 120 120" fill="none" aria-hidden="true">
+    <circle cx="60" cy="60" r="56" stroke="currentColor" stroke-opacity="0.25"/>
+    <g class="spin">
+      <path d="M60 14 A46 46 0 0 1 106 60" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M60 106 A46 46 0 0 1 14 60" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    </g>
+    <g class="spin rev">
+      <circle cx="60" cy="60" r="30" stroke="currentColor" stroke-opacity="0.5" stroke-dasharray="2 6"/>
+    </g>
+    <circle cx="60" cy="60" r="5" stroke="currentColor" stroke-width="1.4"/>
+  </svg>
+
+  <p class="eyebrow">A darśana</p>
+  <h1>Ṛtasavitṛ Darśana</h1>
+  <p class="subtitle">A Circular-Recursive Ontology of Experience and Its Terminus</p>
+
+  <hr class="rule">
+
+  <p class="author"><a href="https://westernsydney.academia.edu/SSharma" rel="author">Shubham Sharma</a></p>
+  <p class="year">2026</p>
+
+  <a class="download" href="RD_v948.docx" download="RD_v948.docx">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></svg>
+    Download the work
+  </a>
+  <p class="meta"><span>Word document</span><span>v948</span><span>573 pages</span><span>5.2 MB</span></p>
+</main>
+<footer>© 2026 Shubham Sharma</footer>
+</body>
+</html>
