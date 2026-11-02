@@ -1,2 +1,3 @@
 [build]
-  publish = "site"
+  command = "node --test 'build/*.test.mjs' && node build/cli.mjs"
+  publish = "dist"

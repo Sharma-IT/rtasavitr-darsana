@@ -1,0 +1,14 @@
+{
+  "name": "rd-site-build",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test \"*.test.mjs\"",
+    "mutate": "stryker run",
+    "lint": "eslint --max-warnings=0 ."
+  },
+  "devDependencies": {
+    "@stryker-mutator/core": "10.1.1",
+    "eslint": "10.13.0"
+  }
+}
